@@ -50,6 +50,7 @@
     ./modules/rofi/rofi.nix
     ./modules/helix/helix.nix
     ./modules/hyprlock/hyprlock.nix
+    ./modules/hypridle/hypridle.nix
     ./modules/kitty/kitty.nix
     ./modules/wlogout/wlogout.nix
     ./modules/waybar/waybar.nix
