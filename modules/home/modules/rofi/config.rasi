@@ -30,7 +30,7 @@ configuration {
 	base0E: #eec6f5FF;
 	base0F: #c8f8f7FF;
 
-  font: "InconsolataLGC Nerd Font 16";
+  font: "FiraCode Nerd Font 16";
 
 	transparency: transparent;
 }
