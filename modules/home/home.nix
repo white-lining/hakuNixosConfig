@@ -52,12 +52,12 @@
     ./modules/hyprlock/hyprlock.nix
     ./modules/kitty/kitty.nix
     ./modules/wlogout/wlogout.nix
-    ./modules/git/git.nix
     ./modules/waybar/waybar.nix
     ./modules/zsh/zsh.nix
     ./modules/zsh/starship.nix
     ./modules/zsh/tmux.nix
     ./modules/yazi/yazi.nix
+    ./modules/zsh/git.nix
     ./modules/music/music.nix
   ];
 

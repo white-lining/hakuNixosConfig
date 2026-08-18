@@ -8,6 +8,7 @@
     pkgs.neovim
     pkgs.vim
     pkgs.kitty
+    pkgs.rofi
     pkgs.wget
     pkgs.yazi
     pkgs.nh
