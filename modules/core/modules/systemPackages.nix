@@ -31,6 +31,7 @@
     # micelanious
     pkgs.xfce.thunar
     pkgs.bibata-cursors
+    pkgs.papirus-icon-theme
     pkgs.greetd
     pkgs.tuigreet
     pkgs.less

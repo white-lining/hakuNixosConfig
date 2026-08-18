@@ -4,8 +4,8 @@
     fontconfig.enable = true;
     packages = with pkgs;
     [
-      fira-code
-      hasklug
+      nerd-font.fira-code
+      nerd-fonts.hasklug
     ];
   };
 }
