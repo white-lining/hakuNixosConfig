@@ -30,6 +30,7 @@
     pkgs.gcc
     pkgs.clang
     pkgs.python3
+    pkgs.wttrbar
 
     # music
     pkgs.mpc
