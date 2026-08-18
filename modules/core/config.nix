@@ -25,4 +25,6 @@
     # Stylix configuration
     ./modules/stylix.nix
   ];
+
+  system.stateVersion = "25.11";
 }
