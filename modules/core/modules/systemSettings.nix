@@ -28,10 +28,11 @@
   security = {
     rtkit.enable = true;
     pam.services.hyprlock = {};
+    polkit.enable = true;
   };
 
   networking = {
-    hostname = "nixLotus";
+    hostName = "nixlotus";
     networkmanager.enable = true;
   };
 
@@ -39,7 +40,7 @@
 
   users = {
     defaultUserShell = pkgs.zsh;
-    users.hakuren = {
+    users.kumoren = {
       isNormalUser = true;
       extraGroups = [ "wheel" "input" "power" "audio" "video" "networkmanager" ];
     };

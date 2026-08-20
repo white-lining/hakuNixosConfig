@@ -4,8 +4,8 @@
     fontconfig.enable = true;
     packages = with pkgs;
     [
-      nerd-font.fira-code
-      nerd-fonts.hasklug
+      nerd-fonts.lilex
+      nerd-fonts.mononoki
     ];
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, pkgs-stable, config, ... }:
+{ pkgs, inputs, pkgs-stable, config, ... }:
 {
   home.packages =
   [
@@ -12,6 +12,7 @@
     pkgs.slurp
     pkgs.btop
     pkgs.alsa-utils
+    # inputs.zen-browser.${config.system}.default
 
     # Miscelanious
     pkgs.waybar
@@ -27,7 +28,7 @@
     pkgs.cbonsai
     pkgs.zenity
     pkgs.lutris
-    pkgs.gcc
+    # pkgs.gcc
     pkgs.clang
     pkgs.python3
     pkgs.wttrbar

@@ -30,7 +30,7 @@ configuration {
 	base0E: #eec6f5FF;
 	base0F: #c8f8f7FF;
 
-  font: "FiraCode Nerd Font 16";
+	font: "Lilex Nerd Font 15";
 
 	transparency: transparent;
 }

@@ -7,6 +7,8 @@
         show_hidden = true;
       };
     };
+
+    shellWrapperName = "y";
   };
 
   services.udiskie = {
@@ -15,7 +17,7 @@
       file_manager = "";
       opener = {
         edit = [
-          { run = "hx \"$@\""; block = true; desc = "helix"; }
+          { run = "nvim \"$@\""; block = true; desc = "Neovim"; }
         ];
       };
     };

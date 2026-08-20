@@ -24,8 +24,8 @@
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.fira-code;
-      name = "FiraCode Nerd Font";
+      package = pkgs.lilex;
+      name = "Lilex Nerd Font";
     };
   };
 

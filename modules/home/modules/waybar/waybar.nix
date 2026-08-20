@@ -32,7 +32,7 @@
                            "custom/identity"
                            "custom/right_moon"
                            "custom/left_moon" 
-                           "mango/workspaces"
+                           "niri/workspaces"
                            "custom/right_moon"
                            "custom/left_moon"
                            "custom/launcher"
@@ -51,13 +51,11 @@
                           "custom/spacer"
                         ];
 
-        "mango/workspaces" = {
+        "niri/workspaces" = {
           all_outputs = true;
           format = "{icon}";
-          tooltip = false;
-          active_only = false;
-          show_special = false;
-          on_click = "activtate";
+          on_click = "activate";
+          sort_by_number = true;
           format-icons = {
             "1" = "一";
             "2" = "二";
@@ -71,7 +69,7 @@
             "10" = "十";
           };
           persistent-workspaces = {
-            "*" = [ 1 2 3 4 ];
+            "*" = [ 1 2 3 4 5 ];
           };
         };
 
@@ -100,6 +98,7 @@
           on-click = "amixer set Master 2%+";
           on-click-middle = "pavucontrol";
           on-click-right = "amixer set Master 2%-";
+          interval = 5;
         };
 
         "custom/identity" = {
@@ -122,7 +121,7 @@
         };
 
         "custom/right_moon" = {
-          format = "<span size='x-large'>󰃜</span>";
+          format = "<span size='x-large'>󰃜 </span>";
           tooltip = false;
         };
 
@@ -164,7 +163,7 @@
         };
 
         "memory" = {
-          format = " {}% ";
+          format = "󱩅 {}% ";
           tooltip = true;
           tooltip-format = "RAM: Used {used:0.1f}G / Total {total:0.1f}G";
           interval = 4;
@@ -173,7 +172,7 @@
         "disk" = {
           interval = 30;
           unit = "GB";
-          format = "󱘾 {percentage_used:2}% ";
+          format = "󱠆 {percentage_used:2}% ";
           path = "/";
           tooltip = true;
           tooltip-format = "Root: Used {specific_used:0.2f}G / Free: {specific_free:0.2f}G";
@@ -181,7 +180,7 @@
 
         "cpu" = {
           interval = 5;
-          format = " {usage:2}%";
+          format = " {usage:2}%";
         };
 
         "temperature" = { #Doesn' work
@@ -217,7 +216,7 @@
 
     style = ''
       * {
-        font-family: FiraCode Nerd Font;
+        font-family: Lilex Nerd Font;
         font-size: 15px;
       }
 
@@ -279,7 +278,6 @@
 
       #clock {
         color: #5a8fb8;
-        font-weight: bold;
       }
 
       #custom-launcher,

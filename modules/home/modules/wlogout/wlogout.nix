@@ -56,7 +56,7 @@
 
     style = ''
       * {
-        font-family: "FiraCode Nerd Font";
+        font-family: "Lilex Nerd Font";
         font-size: 16px;
         font-weight: bold;
         transition: 200ms ease-in;

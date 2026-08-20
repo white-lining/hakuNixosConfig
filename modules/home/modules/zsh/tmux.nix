@@ -25,7 +25,7 @@
       bind-key m last-pane
       bind-key v split-window -h
 
-      set -g defaut-terminal "tmux-256color"
+      set -g default-terminal "tmux-256color"
       set -as terminal-features ",xterm-256color:RGB"
       set -g mouse on
       set -sg escape-time 0
@@ -39,7 +39,7 @@
     secureSocket = true;
     disableConfirmationPrompt = true;
 
-    plugins = with pkgs; [
+    plugins = with pkgs.tmuxPlugins; [
       {
         plugin = nord;
       }

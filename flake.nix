@@ -20,6 +20,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # zen-browser = {
+    #   url = "github:youwen5/zen-browser-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
   };
 
   outputs = {
@@ -29,6 +39,7 @@
     home-manager,
     nixvim,
     stylix,
+    niri,
     ...
   }@inputs:
     let
@@ -36,28 +47,32 @@
         system = "x86_64-linux";
         config.allowUnfree = true;
       };
+      system = "x84_64-linux";
     in
     {
       # When rebuilding, nixos will look for the configuration in nixosConfigurations.HOSTNAME, which we'll define here as a part of the flake, nixosSystem is the function that creates the system
-      nixosConfigurations.nixLotus = nixpkgs.lib.nixosSystem
+      nixosConfigurations.nixlotus = nixpkgs.lib.nixosSystem
       {
         # specialArgs allows to pass extra arguments to all modules, an obvious use case it to pass inputs
         specialArgs = { inherit inputs; };
 
+        system = system;
+
         modules = [
           ./modules/core/config.nix
           home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
           {
             home-manager = {
               backupFileExtension = "homeBackup";
               useGlobalPkgs = true;
-              useUserpackages = true;
+              useUserPackages = true;
               extraSpecialArgs = { inherit inputs pkgs-stable; };
-              users.hakuren = {
+              users.kumoren = {
                 imports = [
                   ./modules/home/home.nix
                   nixvim.homeModules.nixvim
+                  niri.homeModules.niri
                 ];
               };
             };

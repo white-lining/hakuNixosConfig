@@ -1,10 +1,11 @@
 { pkgs, pkgs-stable, config, ... }:
 {
   home = {
-    username = "hakuren";
-    homeDirectory = "/home/hakuren";
+    username = "kumoren";
+    homeDirectory = "/home/kumoren";
     stateVersion = "25.11";
     pointerCursor = {
+      enable = true;
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 24;
@@ -12,7 +13,7 @@
     };
   };
 
-  services.swww.enable = true;
+  services.awww.enable = true;
 
   gtk = {
     enable = true;
@@ -46,7 +47,7 @@
 
   imports = [
     ./modules/homeSettings/homePackages.nix
-    ./modules/mango/mango.nix
+    ./modules/niri/niri.nix
     ./modules/rofi/rofi.nix
     ./modules/helix/helix.nix
     ./modules/hyprlock/hyprlock.nix

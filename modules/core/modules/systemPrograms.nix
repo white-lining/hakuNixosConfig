@@ -7,9 +7,9 @@
       enable = true;
     };
 
-    mango = {
+    niri = {
       enable = true;
-      addLoginEntry = true;
+      # addLoginEntry = true;
     };
 
     gamemode.enable = true;

@@ -30,11 +30,11 @@
     pkgs.eza
 
     # micelanious
-    pkgs.xfce.thunar
+    pkgs.thunar
     pkgs.bibata-cursors
     pkgs.papirus-icon-theme
-    pkgs.greetd
-    pkgs.tuigreet
+    # pkgs.greetd
+    # pkgs.tuigreet
     pkgs.less
     pkgs.pavucontrol
     pkgs.inotify-tools

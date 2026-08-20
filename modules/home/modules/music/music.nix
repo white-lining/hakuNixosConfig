@@ -2,7 +2,7 @@
 {
   services.mpd = {
     enable = true;
-    musicDirectory = "/home/hakuren/music";
+    musicDirectory = "/home/kumoren/music";
     extraConfig = ''
       audio_output {
         type "pipewire"
@@ -13,7 +13,7 @@
 
   programs.ncmpcpp = {
     enable = true;
-    mpdMusicDir = "/home/hakuren/music";
+    mpdMusicDir = "/home/kumoren/music";
     settings = {
       mpd_host = "127.0.0.1";
       mpd_port = "6600";

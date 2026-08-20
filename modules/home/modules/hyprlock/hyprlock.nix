@@ -7,7 +7,7 @@
 
       background = [
         {
-          path = "/home/hakuren/hakurenNixosConfig/resources/siren.png";
+          path = "/home/kumoren/images/siren.png";
           blur_passes = 2;
           blur_size = 1;
         }
@@ -19,7 +19,7 @@
       };
 
       image = {
-        path = "/home/hakuren/hakurenNixosConfig/resources/Mountain.jpg";
+        path = "/home/kumoren/images/Mountain.jpg";
         border_size = 3;
         border_color = "rgba(238, 198, 245, 1)";
         size = 160;
@@ -34,7 +34,7 @@
           text = "cmd[update:1000] echo -e \"$(LC_TIME=es_AR.UTF-8 date +\"%A, %B %d\")\"";
           color = "rgba(46, 52, 64, 1)";
           font_size = 15;
-          font_family = "FiraCode Nerd Font";
+          font_family = "Lilex Nerd Font";
           position = "-70,-80";
           halign = "right";
           valign = "center";
@@ -43,7 +43,7 @@
         {
           text = "cmd[update:1000] echo \"<span>$(date +\"%H:%M\")</span>\"";
           color = "rgba(46, 52, 64, 1)";
-          font_family = "FiraCode Nerd Font";
+          font_family = "Lilex Nerd Font";
           font_size = 65;
           position = "-50,0";
           halign = "right";
@@ -85,7 +85,7 @@
 
           rounding = 0;
 
-          font_family = "FiraCode Nerd Font";
+          font_family = "Lilex Nerd Font";
           placeholder_text = "Ware wa...";
           hide_input = false;
 
