@@ -12,6 +12,7 @@
     pkgs.slurp
     pkgs.btop
     pkgs.alsa-utils
+    pkgs.alacritty
     # inputs.zen-browser.${config.system}.default
 
     # Miscelanious
