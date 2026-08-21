@@ -8,8 +8,8 @@
     {
 
       "<leader>f" = { action = "find_files"; };
-      "<leader>d" = { action = "live_grep"; };
-      "<leader>x" = { action = "buffers"; };
+      "<leader>df" = { action = "live_grep"; };
+      "<leader>dd" = { action = "buffers"; };
 
     };
   };

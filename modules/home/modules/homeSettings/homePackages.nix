@@ -13,6 +13,7 @@
     pkgs.btop
     pkgs.alsa-utils
     pkgs.alacritty
+    pkgs.vivaldi
     # inputs.zen-browser.${config.system}.default
 
     # Miscelanious

@@ -10,7 +10,6 @@
       unbind j
       unbind l
       unbind c
-      unbind ;
 
       bind-key y kill-window
       bind-key u new-window

@@ -3,23 +3,11 @@
   keymaps =
   [
 
-    {
-      mode = "n";
-      key = "<leader>t";
-      action = "<cmd>Ex<CR>";
-    }
+    # File exploring
+    { mode = "n"; key = "<leader>ee"; action = "<cmd>Ex<CR>"; }
+    { mode = "n"; key = "<leader>er"; action = "<cmd>lua MiniFiles.open()<CR>"; }
 
-    {
-      mode = "n";
-      key = "<leader>e";
-      action = "ve";
-    }
 
-    {
-      mode = "n";
-      key = "<leader>y";
-      action = "vb";
-    }
 
     {
       mode = "n";
@@ -35,13 +23,13 @@
 
     {
       mode = "n";
-      key = "<leader>u";
+      key = "<leader>i";
       action = "A";
     }
 
     {
       mode = "n";
-      key = "<leader>a";
+      key = "<leader>x";
       action = "<cmd>nohlsearch<CR>";
     }
 
@@ -51,33 +39,15 @@
       action = "ciw";
     }
 
-    {
-      mode = "n";
-      key = "n";
-      action = "nzzzv";
-    }
-
-    {
-      mode = "n";
-      key = "N";
-      action = "Nzzzv";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>s";
-      action = "<C-d>zz";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>w";
-      action = "<C-u>zz";
-    }
+    # Center cursor when jumping
+    { mode = "n"; key = "n"; action = "nzzzv"; } # Next search result centered
+    { mode = "n"; key = "N"; action = "Nzzzv"; } # Previous search result centered
+    { mode = "n"; key = "<C-j>"; action = "<C-d>zz"; }
+    { mode = "n"; key = "<C-k>"; action = "<C-u>zz"; }
 
     # Buffer navigation
-    { mode = "n"; key = "<leader>bn"; action = "<cmd>bnext<CR>" }
-    { mode = "n"; key = "<leader>bh"; action = "<cmd>bprevious<CR>" }
+    { mode = "n"; key = "<leader>bn"; action = "<cmd>bnext<CR>"; }
+    { mode = "n"; key = "<leader>bh"; action = "<cmd>bprevious<CR>"; }
 
     # window navigation
     { mode = "n"; key = "<leader>hh"; action = "<C-w>h"; }
@@ -88,6 +58,24 @@
     # Indenting in visual mode using <> without having to enter the mode again after each key press
     { mode = "v"; key = "<"; action = "<gc"; }
     { mode = "v"; key = ">"; action = ">gc"; }
+
+    # Usage of zen mode and twilight plugins
+    { mode = "n"; key = "<leader>zz"; action = "<cmd>ZenMode<CR>"; }
+    { mode = "n"; key = "<leader>zx"; action = "<cmd>Twilight<CR>"; }
+
+    # custom select
+    { mode = "n"; key = "<leader>ss"; action = "evb"; }
+    { mode = "n"; key = "<leader>sd"; action = "ve"; }
+    { mode = "n"; key = "<leader>sa"; action = "vb"; }
+
+    # Hop plugin
+    { mode = "n"; key = "<leader>u"; action = "<cmd>HopWord<CR>"; }
+
+    # Goto type movements
+    { mode = "n"; key = "<leader>gg"; action = "0"; }
+    { mode = "n"; key = "<leader>gh"; action = "$"; }
+    { mode = "n"; key = "<leader>gy"; action = "gg"; }
+    { mode = "n"; key = "<leader>gb"; action = "G"; }
 
   ];
 }

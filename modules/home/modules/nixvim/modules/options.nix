@@ -9,8 +9,9 @@
     sidescrolloff = 10;
     scrolloff = 10;
 
-    # More colors
+    # visual
     termguicolors = true;
+    showmatch = true;
 
     # Default completion
     completeopt =
@@ -19,6 +20,12 @@
       "noselect"
     ];
 
+    # Wrap
+    wrap = true;
+    linebreak = true;
+    breakindent = true;
+    showbreak = "↪ ";
+
     # Search
     ignorecase = true;
     smartcase = true;
@@ -26,16 +33,19 @@
     incsearch = true;
 
     # Tabs
-    # expandtab = true;
-    # tabstop = 2;
-    # shiftwidth = 2;
-    # softtabstop = 2;
+    expandtab = true;
+    tabstop = 2;
+    shiftwidth = 2;
+    softtabstop = 2;
     smarttab = true;
+    autoindent = true;
 
     # File handling
     writebackup = false;
     swapfile = false;
     undofile = true;
+    backup = false;
+    autoread = true;
 
     # Other
     signcolumn = "yes";

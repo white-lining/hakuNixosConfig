@@ -10,7 +10,7 @@
       {
         style =
         {
-          shape = "Underscore";
+          shape = "Beam";
           blinking = "Always";
         };
         blink_interval = 600;

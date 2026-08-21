@@ -23,13 +23,15 @@
         {
           accel-profile = "flat";
         };
+
+        focus-follow-mouse = {};
       };
 
       binds = {
 
         "Control+0".show-hotkey-overlay = {};
 
-        "Super+U".spawn = [ "kitty" ];
+        "Super+U".spawn = [ "alacritty" ];
         "Super+Y".close-window = {};
         "Super+Space".spawn = [ "rofi" "-show" "drun" ];
         "Super+G".spawn-sh = [ "wlogout -b 1 -c 20 -r 20 -L 1700 -T 325 -B 325" ];
@@ -90,7 +92,6 @@
         preset-column-widths._children = [
           { proportion = 0.35; }
           { proportion = 0.50; }
-          { proportion = 0.66; }
           { proportion = 1.0; }
         ];
 
@@ -124,7 +125,7 @@
 
       window-rule._children =
       [
-        { match._props = { is-focused=false; }; background-effect = { blur = true; }; }
+        { match._props = { is-focused=false; }; draw-border-with-background=false; background-effect = { blur = true; }; }
         { match._props = { is-active=true; }; opacity = 0.7; }
       ];
 

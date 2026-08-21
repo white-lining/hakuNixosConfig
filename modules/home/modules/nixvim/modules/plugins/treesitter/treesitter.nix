@@ -4,13 +4,13 @@
   {
     enable = true;
     nixGrammars = true;
+    folding.enable = false;
 
     settings =
     {
       highlight.enable = true;
       indent.enable = true;
     };
-    folding = false;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars;
     [
@@ -23,9 +23,7 @@
       markdown
       nix
       rust
-      qml
       make
-      md
     ];
   };
 }

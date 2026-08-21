@@ -61,6 +61,8 @@
     ./modules/yazi/yazi.nix
     ./modules/zsh/git.nix
     ./modules/music/music.nix
+    ./modules/nixvim/nixvim.nix
+    ./modules/alacritty/alacritty.nix
   ];
 
   stylix.targets = {
