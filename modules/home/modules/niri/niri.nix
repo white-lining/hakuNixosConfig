@@ -24,7 +24,7 @@
           accel-profile = "flat";
         };
 
-        focus-follow-mouse = {};
+        focus-follows-mouse = {};
       };
 
       binds = {
