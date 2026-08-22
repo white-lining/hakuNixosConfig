@@ -30,6 +30,7 @@
       binds = {
 
         "Control+0".show-hotkey-overlay = {};
+				"Control+1".spawn-sh = [ "zenity --calendar --title=\"Calendario\" --text=\"Bienvenido de vuelta, Hakuren.\"" ];
 
         "Super+U".spawn = [ "alacritty" ];
         "Super+Y".close-window = {};
@@ -89,13 +90,14 @@
 
         always-center-single-column = {};
 
-        preset-column-widths._children = [
-          { proportion = 0.35; }
+        preset-column-widths._children = [ 
           { proportion = 0.50; }
           { proportion = 1.0; }
         ];
 
-        default-column-width = { proportion = 0.5; };
+					#empty-workspace-above-first = {};
+
+        default-column-width = { proportion = 1.0; };
 
         focus-ring = {
           off = {};
@@ -126,7 +128,7 @@
       window-rule._children =
       [
         { match._props = { is-focused=false; }; draw-border-with-background=false; background-effect = { blur = true; }; }
-        { match._props = { is-active=true; }; opacity = 0.7; }
+        { match._props = { is-active=true; }; opacity = 0.8; }
       ];
 
     };

@@ -33,7 +33,7 @@
     incsearch = true;
 
     # Tabs
-    expandtab = true;
+    # expandtab = true;
     tabstop = 2;
     shiftwidth = 2;
     softtabstop = 2;

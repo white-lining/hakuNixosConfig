@@ -23,7 +23,7 @@
     # Manage pairs from mini
     ./mini/surround.nix
 
-        #jumping arround
+    #jumping arround
     ./hop/hop.nix
 
     # Collection of plugins that require small to no configuration and have no connection between them
@@ -31,5 +31,8 @@
 
     # Dashboard
     ./dashboard/dashboard.nix
+
+    # Cursor line
+    ./cursorline/cursorline.nix
   ];
 }

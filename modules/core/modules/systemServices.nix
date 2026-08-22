@@ -17,11 +17,21 @@
       pulse.enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
+			jack.enable = true;
     };
 
     power-profiles-daemon.enable = true;
 
     flatpak.enable = true;
+
+    displayManager = 
+    {
+      sddm = 
+      {
+        enable = true;
+        wayland.enable = true;
+      };
+    };
   };
 
   console.useXkbConfig = true;

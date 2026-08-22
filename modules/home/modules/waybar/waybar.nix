@@ -13,64 +13,63 @@
         margin-right = 0;
         margin-left = 0;
 
-        modules-left = [
-                         "custom/spacer"
-                         "custom/left_moon"
-                         "disk"
-                         "memory"
-                         "cpu"
-                         "custom/right_moon"
-                         "custom/left_moon"  
-                         "network" 
-                         "custom/right_moon"
-                         "custom/left_moon"  
-                         "custom/wallchange" 
-                         "custom/right_moon"
-                       ];
-        modules-center = [ 
-                           "custom/left_moon"
-                           "custom/identity"
-                           "custom/right_moon"
-                           "custom/left_moon" 
-                           "niri/workspaces"
-                           "custom/right_moon"
-                           "custom/left_moon"
-                           "custom/launcher"
-                           "custom/right_moon"
-                         ];
-        modules-right = [ 
-                          "custom/left_moon"  
-                          "custom/weather" 
-                          "custom/right_moon"
-                          "custom/left_moon"  
-                          "pulseaudio#source" 
-                          "custom/right_moon"
-                          "custom/left_moon"  
-                          "clock"
-                          "custom/right_moon"
-                          "custom/spacer"
-                        ];
+				modules-left = 
+				[
+					"custom/spacer"
+					"custom/pilar"
+					"niri/workspaces"
+					"custom/pilar"
+				];
+
+				modules-center =
+				[
+					"custom/left_moon"
+					"custom/identity"
+					"custom/right_moon"
+				];
+
+				modules-right =
+				[
+					"custom/pilar"
+					"pulseaudio#source"
+					"custom/pilar"
+					"clock"
+					"custom/pilar"
+					"custom/weather"
+					"custom/pilar"
+					"network"
+					"custom/pilar"
+					"disk"
+					"memory"
+					"cpu"
+					"custom/pilar"
+					"custom/spacer"
+				];
 
         "niri/workspaces" = {
           all_outputs = true;
           format = "{icon}";
           on_click = "activate";
           sort_by_number = true;
-          format-icons = {
-            "1" = "一";
-            "2" = "二";
-            "3" = "三";
-            "4" = "四";
-            "5" = "五";
-            "6" = "六";
-            "7" = "七";
-            "8" = "八";
-            "9" = "九";
-            "10" = "十";
-          };
-          persistent-workspaces = {
-            "*" = [ 1 2 3 4 5 ];
-          };
+          # format-icons = {
+          #   "1" = "一";
+          #   "2" = "二";
+          #   "3" = "三";
+          #   "4" = "四";
+          #   "5" = "五";
+          #   "6" = "六";
+          #   "7" = "七";
+          #   "8" = "八";
+          #   "9" = "九";
+          #   "10" = "十";
+          # };
+					format-icons = {
+						active = "<span size='medium'> </span>";
+						default = "<span size='medium'>󰫣 </span>";
+					};
+          # persistent-workspaces = {
+          #   "*" = [ 1 2 3 4 5 ];
+          # };
         };
 
         "mango/window" = {
@@ -85,7 +84,7 @@
           format = "{icon} {volume}%";
           format-muted = "󰝟";
           tooltip = true;
-          tooltip-format = "Volume : {volume}%.\nleft click: volume up.\nright click: Volume down.\ncentral click: Volume control.";
+          tooltip-format = " : {volume}%.\nLeft click:  .\nRight click: .\nCentral click: 󰢻 .";
           format-icons = {
             headphone = "";
             default = [
@@ -95,14 +94,14 @@
             ];
           };
           scroll-step = 5;
-          on-click = "amixer set Master 2%+";
+          on-click = "wpctl set-volume @DEFAULT_SINK@ 2%+";
           on-click-middle = "pavucontrol";
-          on-click-right = "amixer set Master 2%-";
+          on-click-right = "wpctl set-volume @DEFAULT_SINK@ 2%-";
           interval = 5;
         };
 
         "custom/identity" = {
-          format = "<span size='x-large'>󰌪</span>";
+          format = "<span size='x-large'></span>";
           on-click = "wlogout -b 1 -c 20 -r 20 -L 1700 -T 325 -B 325";
           tooltip = true;
           tooltip-format = "Rest as you see fit...Please";
@@ -114,6 +113,12 @@
           tooltip-format = "Explore the sky of posiblities";
           on-click = "rofi -show drun";
         };
+
+				# 󱋱 
+				"custom/pilar" = {
+					format = "<span size='x-large'>|</span>";
+					tooltip = false;
+				};
 
         "custom/left_moon" = {
           format = "<span size='x-large'>󰽥</span>";
@@ -133,16 +138,17 @@
         "custom/wallchange" = {
           format = "<span size='x-large'></span>";
           exec = "echo ; echo 󰆊 switch wallpaper";
-          on-click = "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuren/hakurenNixosConfig/resources/blueAppreciation.jpg";
-          on-click-middle = "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuren/hakurenNixosConfig/resources/siren.png";
-          on-click-right = "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuren/hakurenNixosConfig/resources/blueDragons.jpg";
-          on-scroll-up = "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuren/hakurenNixosConfig/resources/Glint.jpg";
-          on-scroll-down = "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuren/hakurenNixosConfig/resources/CyndiWave.png";
+          on-click = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/blueAppreciation.jpg";
+          on-click-middle = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/siren.png";
+          on-click-right = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/blueDragons.jpg";
+          on-scroll-up = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/Glint.jpg";
+          on-scroll-down = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/CyndiWave.png";
         };
 
         "clock" = {
           timezone = "America/Argentina/Cordoba";
-          format = "󰃰 {:%m-%d-%H:%M}";
+          # format = "󰃰 {:%m-%d-%H:%M}";
+					format = "󰃰 {:%H-%M}";
           format_alt = "{:%A, %B %d, %Y (%R)} 󰃰 ";
           tooltip-format = "<tt><small><span size='large'>{calendar}</span></small></tt>";
           calendar = {
@@ -163,7 +169,7 @@
         };
 
         "memory" = {
-          format = "󱩅 {}% ";
+          format = "<span size='medium'>󱩅 </span>{}% ";
           tooltip = true;
           tooltip-format = "RAM: Used {used:0.1f}G / Total {total:0.1f}G";
           interval = 4;
@@ -172,7 +178,7 @@
         "disk" = {
           interval = 30;
           unit = "GB";
-          format = "󱠆 {percentage_used:2}% ";
+          format = "<span size='medium'>󱠆 </span>{percentage_used:2}% ";
           path = "/";
           tooltip = true;
           tooltip-format = "Root: Used {specific_used:0.2f}G / Free: {specific_free:0.2f}G";
@@ -180,7 +186,7 @@
 
         "cpu" = {
           interval = 5;
-          format = " {usage:2}%";
+          format = "<span size='medium'> </span>{usage:2}%";
         };
 
         "temperature" = { #Doesn' work
@@ -333,6 +339,11 @@
       #custom-spacer {
         background-color: #2e3440;
       }
+
+			#custom-pilar {
+			  background-color: #2e3440;
+				color: #e3f4ff;
+			}
 
     '';
   };

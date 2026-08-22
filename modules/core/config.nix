@@ -19,9 +19,6 @@
     # System programs
     ./modules/systemPrograms.nix
 
-    # login configuration
-    ./modules/login.nix
-
     # Stylix configuration
     ./modules/stylix.nix
   ];

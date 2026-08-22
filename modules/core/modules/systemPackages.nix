@@ -33,6 +33,7 @@
     pkgs.thunar
     pkgs.bibata-cursors
     pkgs.papirus-icon-theme
+    pkgs.sddm-chili-theme
     # pkgs.greetd
     # pkgs.tuigreet
     pkgs.less

@@ -50,14 +50,14 @@
     { mode = "n"; key = "<leader>bh"; action = "<cmd>bprevious<CR>"; }
 
     # window navigation
-    { mode = "n"; key = "<leader>hh"; action = "<C-w>h"; }
-    { mode = "n"; key = "<leader>jj"; action = "<C-w>j"; }
-    { mode = "n"; key = "<leader>kk"; action = "<C-w>k"; }
-    { mode = "n"; key = "<leader>ll"; action = "<C-w>l"; }
+    { mode = "n"; key = "<C>jh"; action = "<C-w>h"; }
+    { mode = "n"; key = "<C>jj"; action = "<C-w>j"; }
+    { mode = "n"; key = "<C>jk"; action = "<C-w>k"; }
+    { mode = "n"; key = "<C>jl"; action = "<C-w>l"; }
 
     # Indenting in visual mode using <> without having to enter the mode again after each key press
-    { mode = "v"; key = "<"; action = "<gc"; }
-    { mode = "v"; key = ">"; action = ">gc"; }
+    { mode = "v"; key = "<"; action = "<gv"; } #TODO: This did not work becuase of a typo, rebuild to make it work as intended
+    { mode = "v"; key = ">"; action = ">gv"; }
 
     # Usage of zen mode and twilight plugins
     { mode = "n"; key = "<leader>zz"; action = "<cmd>ZenMode<CR>"; }
@@ -69,13 +69,15 @@
     { mode = "n"; key = "<leader>sa"; action = "vb"; }
 
     # Hop plugin
-    { mode = "n"; key = "<leader>u"; action = "<cmd>HopWord<CR>"; }
+    { mode = [ "n" "v" ]; key = "<leader>u"; action = "<cmd>HopWord<CR>"; }
 
     # Goto type movements
-    { mode = "n"; key = "<leader>gg"; action = "0"; }
-    { mode = "n"; key = "<leader>gh"; action = "$"; }
-    { mode = "n"; key = "<leader>gy"; action = "gg"; }
-    { mode = "n"; key = "<leader>gb"; action = "G"; }
+    { mode = "n"; key = "<leader>gh"; action = "0"; }
+    { mode = "n"; key = "<leader>gj"; action = "G"; }
+    { mode = "n"; key = "<leader>gk"; action = "gg"; }
+    { mode = "n"; key = "<leader>gl"; action = "$"; } # TODO: rebuild
+
+    { mode = "n"; key = "<leader>r"; action = "<C-r>"; }
 
   ];
 }
