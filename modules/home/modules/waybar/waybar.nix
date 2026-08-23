@@ -16,17 +16,17 @@
 				modules-left = 
 				[
 					"custom/spacer"
+					"custom/left_moon"
+					"custom/identity"
+					"custom/right_moon"
 					"custom/pilar"
 					"niri/workspaces"
 					"custom/pilar"
 				];
 
-				modules-center =
-				[
-					"custom/left_moon"
-					"custom/identity"
-					"custom/right_moon"
-				];
+				# modules-center =
+				# [
+				# ];
 
 				modules-right =
 				[

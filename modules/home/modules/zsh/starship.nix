@@ -8,8 +8,8 @@
       add_newline = true;
 
       format = lib.concatStrings [
-        "  ($hostname|"
-        "$username)"
+        "  $hostname|"
+        "$username"
         "$directory"
         "$fill"
         "$git_branch"
@@ -31,7 +31,7 @@
       };
 
       character = {
-        success_symbol = "[󰞷 ](bold blue)";
+        success_symbol = "[󱇴 ](bold blue)";
         error_symbol = "[❮](bold red)";
         vicmd_symbol = "[❯](bold cyan)";
       };
