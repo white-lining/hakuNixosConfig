@@ -60,7 +60,8 @@
 
         # Maximizing windows
         "Super+F".maximize-column = {};
-        "Alt+F".maximize-window-to-edges = {};
+        "Super+X".toggle-window-rule-opacity = {};
+        "Alt+F".fullscreen-window = {};
 
         # Control manually column width
         "Super+V".set-column-width = [ "-5%" ];
@@ -78,9 +79,13 @@
         "Alt+K".move-window-up = {};
         "Alt+L".move-column-right = {};
 
+				# Other
         "Alt+S".spawn-sh = [ "grim -g \"$(slurp)\" - | wl-copy" ];
         "Alt+Q".quit = {};
-        "Alt+U".toggle-window-rule-opacity = {};
+
+				# Floating window controls
+				"Alt+N".toggle-window-floating = {};
+				"Alt+M".switch-focus-between-floating-and-tiling = {};
       };
 
       layout =
@@ -97,7 +102,7 @@
 
 					#empty-workspace-above-first = {};
 
-        default-column-width = { proportion = 0.7; };
+        default-column-width = { proportion = 0.75; };
 
         focus-ring = {
           off = {};
@@ -130,6 +135,33 @@
         { match._props = { is-focused=false; }; draw-border-with-background=false; background-effect = { blur = true; }; }
         { match._props = { is-active=true; }; opacity = 0.8; }
       ];
+
+			animations = 
+			{
+				workspace-switch =
+				{
+					curve = "ease-out-quad";
+					duration-ms = 150;
+				};
+
+				window-open =
+				{
+					curve = "ease-out-expo";
+					duration-ms = 100;
+				};
+
+				window-close =
+				{
+					curve = "ease-out-cubic";
+					duration-ms = 100;
+				};
+
+				window-movement =
+				{
+					curve = "ease-out-expo";
+					duration-ms = 100;
+				};
+			};
 
     };
   };

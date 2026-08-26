@@ -11,21 +11,21 @@
     base04 = "#e3f4ff"; 
     base05 = "#e3f4ff"; 
     base06 = "#e3f4ff"; 
-    base07 = "#c1fefe";
-    base08 = "#9bfff8"; 
+    base07 = "#89c0ff";
+    base08 = "#7eadcf"; 
     base09 = "#eec6f5";
-    base0A = "#bdfced"; 
-    base0B = "#79d3be";
+    base0A = "#6caefa"; 
+    base0B = "#9dcfd2";
     base0C = "#b1dbf9"; 
-    base0D = "#c4def1";
-    base0E = "#7eadcf";
-    base0F = "#93fff8";
+    base0D = "#cee4fd";
+    base0E = "#b6e2f2";
+    base0F = "#84bcfd";
   };
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.lilex;
-      name = "Lilex Nerd Font";
+      package = pkgs.nerd-fonts.inconsolata-lgc;
+      name = "InconsolataLGC Nerd Font";
     };
   };
 
