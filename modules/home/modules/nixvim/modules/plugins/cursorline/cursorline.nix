@@ -8,7 +8,7 @@
     {
       cursorline =
       {
-        enable = true;
+        enable = false;
         number = false;
       };
 

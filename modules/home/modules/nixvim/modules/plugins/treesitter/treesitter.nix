@@ -21,7 +21,6 @@
       c
       cpp
       markdown
-      nix
       rust
       make
     ];

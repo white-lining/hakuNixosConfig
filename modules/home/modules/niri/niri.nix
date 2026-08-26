@@ -97,7 +97,7 @@
 
 					#empty-workspace-above-first = {};
 
-        default-column-width = { proportion = 1.0; };
+        default-column-width = { proportion = 0.7; };
 
         focus-ring = {
           off = {};
