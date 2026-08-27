@@ -18,10 +18,12 @@
 					"custom/spacer"
 					"custom/left_moon"
 					"custom/identity"
+					"custom/pilar"
+					"custom/launcher"
 					"custom/right_moon"
-					"custom/pilar"
+					"custom/left_moon"
 					"niri/workspaces"
-					"custom/pilar"
+					"custom/right_moon"
 				];
 
 				# modules-center =
@@ -30,19 +32,16 @@
 
 				modules-right =
 				[
-					"custom/pilar"
+					"custom/left_moon"
 					"pulseaudio#source"
 					"custom/pilar"
 					"clock"
-					"custom/pilar"
-					"custom/weather"
-					"custom/pilar"
-					"network"
-					"custom/pilar"
+					"custom/right_moon"
+					"custom/left_moon"
 					"disk"
 					"memory"
 					"cpu"
-					"custom/pilar"
+					"custom/right_moon"
 					"custom/spacer"
 				];
 
@@ -72,7 +71,7 @@
           # };
         };
 
-        "mango/window" = {
+        "niri/window" = {
           format = "{class}";
           icon = false;
           max_lenght = 50;
@@ -114,7 +113,6 @@
           on-click = "rofi -show drun";
         };
 
-				# 󱋱 
 				"custom/pilar" = {
 					format = "<span size='x-large'>|</span>";
 					tooltip = false;
@@ -169,7 +167,7 @@
         };
 
         "memory" = {
-          format = "<span size='medium'>󱩅 </span>{}% ";
+          format = "<span size='medium'>󰳿 </span>{}% ";
           tooltip = true;
           tooltip-format = "RAM: Used {used:0.1f}G / Total {total:0.1f}G";
           interval = 4;
@@ -178,7 +176,7 @@
         "disk" = {
           interval = 30;
           unit = "GB";
-          format = "<span size='medium'>󱠆 </span>{percentage_used:2}% ";
+          format = "<span size='medium'> </span>{percentage_used:2}% ";
           path = "/";
           tooltip = true;
           tooltip-format = "Root: Used {specific_used:0.2f}G / Free: {specific_free:0.2f}G";
@@ -186,7 +184,7 @@
 
         "cpu" = {
           interval = 5;
-          format = "<span size='medium'> </span>{usage:2}%";
+          format = "<span size='medium'>󱤟 </span>{usage:2}%";
         };
 
         "temperature" = { #Doesn' work

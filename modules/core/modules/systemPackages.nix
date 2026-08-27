@@ -17,7 +17,7 @@
 
     # Utility
     pkgs.power-profiles-daemon
-    pkgs.starship
+    #pkgs.starship
     pkgs.less
     pkgs.git
     pkgs.udiskie

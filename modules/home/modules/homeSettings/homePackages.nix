@@ -47,6 +47,8 @@ let
     pkgs.alsa-utils
     pkgs.alacritty
     pkgs.vivaldi
+		pkgs.ripgrep
+		pkgs.zsh-powerlevel10k
     # inputs.zen-browser.${config.system}.default
 
     # Miscelanious
@@ -55,6 +57,7 @@ let
     pkgs.hyprlock
     pkgs.hypridle
     pkgs.hyprpicker
+		pkgs.noctalia-shell
     pkgs.fzf
     pkgs.fastfetch
     pkgs.mako

@@ -24,8 +24,8 @@
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerd-fonts.inconsolata-lgc;
-      name = "InconsolataLGC Nerd Font";
+      package = pkgs.nerd-fonts.fira-code;
+      name = "FiraCode Nerd Font";
     };
   };
 

@@ -56,7 +56,7 @@
     ./modules/wlogout/wlogout.nix
     ./modules/waybar/waybar.nix
     ./modules/zsh/zsh.nix
-    ./modules/zsh/starship.nix
+    #./modules/zsh/starship.nix
     ./modules/zsh/tmux.nix
     ./modules/yazi/yazi.nix
     ./modules/zsh/git.nix

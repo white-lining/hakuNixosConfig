@@ -1,22 +1,22 @@
 { pkgs, lib, ... }:
 {
   programs.starship = {
-    enable = true;
+    enable = false;
     enableZshIntegration = true;
     enableBashIntegration = false;
     settings = {
       add_newline = true;
 
       format = lib.concatStrings [
-        "  $hostname|"
-        "$username"
+        #"  $hostname|"
         "$directory"
         "$fill"
         "$git_branch"
         "$git_status"
         "$nix_shell"
         "$line_break"
-        "  $character"
+        " $username"
+        " $character"
       ];
 
       fill = {
@@ -31,7 +31,7 @@
       };
 
       character = {
-        success_symbol = "[󱇴 ](bold blue)";
+        success_symbol = "[](bold blue)";
         error_symbol = "[❮](bold red)";
         vicmd_symbol = "[❯](bold cyan)";
       };
@@ -52,7 +52,7 @@
 
       directory = {
         disabled = false;
-        format = " -> [$path]($style)";
+        format = " [$path]($style)";
         style = "bold cyan";
         truncation_length = 2;
       };
