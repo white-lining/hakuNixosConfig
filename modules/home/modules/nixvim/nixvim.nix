@@ -8,6 +8,8 @@
 
     globals.mapleader = " ";
 
+		nixpkgs.config.allowUnfree = true;
+
     imports =
     [
       ./modules/options.nix

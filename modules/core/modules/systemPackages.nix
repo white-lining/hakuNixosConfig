@@ -28,12 +28,12 @@
     pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal-wlr
     pkgs.eza
+		pkgs.xwayland-satellite
 
     # micelanious
     pkgs.thunar
     pkgs.bibata-cursors
     pkgs.papirus-icon-theme
-    pkgs.sddm-chili-theme
     # pkgs.greetd
     # pkgs.tuigreet
     pkgs.less

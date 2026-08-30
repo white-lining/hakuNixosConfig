@@ -4,11 +4,23 @@
   [
 
     # File exploring
-    { mode = "n"; key = "<leader>ee"; action = "<cmd>Ex<CR>"; }
-    { mode = "n"; key = "<leader>er"; action = "<cmd>lua MiniFiles.open()<CR>"; }
+    #{ mode = "n"; key = "<leader>ee"; action = "<cmd>Ex<CR>"; }
+    { mode = "n"; key = "<leader>e"; action = "<cmd>lua MiniFiles.open()<CR>"; }
+
+		# Buffer navigation and usage with barbar
+		{ mode = "n"; key = "<leader>bh"; action = "<cmd>BufferPick<CR>"; }
+		{ mode = "n"; key = "<leader>bj"; action = "<cmd>BufferClose<CR>"; }
+
+		# Relative Movement
+		{ mode = "n"; key = "<leader>bk"; action = "<cmd>BufferNext<CR>"; }
+		{ mode = "n"; key = "<leader>bl"; action = "<cmd>BufferPrevious<CR>"; }
+
+		# Move the buffers in the tabline
+		{ mode = "n"; key = "<leader>bn"; action = "<cmd>BufferMoveNext<CR>"; }
+		{ mode = "n"; key = "<leader>bm"; action = "<cmd>BufferMovePrevious<CR>"; }
 
 
-
+		# General
     {
       mode = "n";
       key = "<leader>q";
@@ -46,8 +58,8 @@
     { mode = "n"; key = "<C-k>"; action = "<C-u>zz"; }
 
     # Buffer navigation
-    { mode = "n"; key = "<leader>bn"; action = "<cmd>bnext<CR>"; }
-    { mode = "n"; key = "<leader>bh"; action = "<cmd>bprevious<CR>"; }
+    #{ mode = "n"; key = "<leader>bn"; action = "<cmd>bnext<CR>"; }
+    #{ mode = "n"; key = "<leader>bh"; action = "<cmd>bprevious<CR>"; }
 
     # window navigation
     { mode = "n"; key = "<C>jh"; action = "<C-w>h"; }

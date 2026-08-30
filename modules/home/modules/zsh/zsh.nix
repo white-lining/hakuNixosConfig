@@ -25,7 +25,14 @@
 			}
 		];
 
-	  initExtra = "source ./.p10k.zsh";
+	  initContent = "source /home/kumoren/projects/nix/hakurenNixosConfig/modules/home/modules/zsh/.p10k.zsh";
+
+		shellAliases =
+		{
+			nrs = "nh os switch --impure .";
+			nrt = "nh os test --impure .";
+			nrb = "nh os boot --impure .";
+		};
 
   };
 	home.file.".p10k.zsh".source = /home/kumoren/projects/nix/hakurenNixosConfig/modules/home/modules/zsh/.p10k.zsh;

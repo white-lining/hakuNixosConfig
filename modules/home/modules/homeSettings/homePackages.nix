@@ -1,5 +1,14 @@
 { pkgs, inputs, pkgs-stable, config, ... }:
 let
+  centralControlHaku = pkgs.writeShellScriptBin "WhiteGarden" ''
+	  #! /bin/sh
+		chosen_action=$(printf  "system Configuration\nsystem Control\nlauncher" | rofi -dmenu -p "Great Garden Of White Lotus")
+		case "$chosen_action" in
+		  "system Configuration") /home/kumoren/projects/nix/hakurenNixosConfig/resources/scripts/configEditing.sh ;;
+			"system Control") /home/kumoren/projects/nix/hakurenNixosConfig/resources/scripts/systemOptions.sh ;;
+			"launcher") rofi -show drun ;;
+		esac
+	'';
 	volumeControlZen = pkgs.writeShellScriptBin "volume Control Zen" ''
 		#! /bin/sh
 		user_volume=$(zenity --scale --value=50 --text="Set volume now..." --title="Default Sink Volume Control  by Hakuren")
@@ -38,7 +47,7 @@ let
     # Utility
     pkgs.bat
     pkgs.tmux
-    pkgs.onlyoffice-desktopeditors
+    # pkgs.onlyoffice-desktopeditors
     pkgs.zed-editor
     pkgs.cliphist
     pkgs.grim
@@ -70,6 +79,8 @@ let
     pkgs.clang
     pkgs.python3
     pkgs.wttrbar
+		pkgs.imv
+		pkgs.ripgrep
 
     # music
     pkgs.mpc
@@ -87,5 +98,6 @@ let
 		hakuSystemTrack
 		hakuQuickConfig
 		hakuWallpaperChange
+		centralControlHaku
   ];
 }

@@ -6,6 +6,11 @@
     settings = {
       prefer-no-csd = {};
 
+			hotkey-overlay =
+			{
+			  skip-at-startup = true;
+			};
+
       spawn-at-startup =
       [
         "waybar"
@@ -30,12 +35,11 @@
       binds = {
 
         "Control+0".show-hotkey-overlay = {};
-				"Control+1".spawn-sh = [ "zenity --calendar --title=\"Calendario\" --text=\"Bienvenido de vuelta, Hakuren.\"" ];
 
         "Super+U".spawn = [ "alacritty" ];
         "Super+Y".close-window = {};
-        "Super+Space".spawn = [ "rofi" "-show" "drun" ];
-        "Super+G".spawn-sh = [ "wlogout -b 1 -c 20 -r 20 -L 1700 -T 325 -B 325" ];
+        "Super+Space".spawn-sh = [ "WhiteGarden" ];
+        #"Super+G".spawn-sh = [ "wlogout -b 1 -c 20 -r 20 -L 1700 -T 325 -B 325" ];
         "Super+P".toggle-overview = {};
 
         # Switch focus between columns and windows
@@ -102,7 +106,7 @@
 
 					#empty-workspace-above-first = {};
 
-        default-column-width = { proportion = 0.75; };
+        default-column-width = { proportion = 0.5; };
 
         focus-ring = {
           off = {};
@@ -141,25 +145,25 @@
 				workspace-switch =
 				{
 					curve = "ease-out-quad";
-					duration-ms = 150;
+					duration-ms = 180;
 				};
 
 				window-open =
 				{
 					curve = "ease-out-expo";
-					duration-ms = 100;
+					duration-ms = 130;
 				};
 
 				window-close =
 				{
 					curve = "ease-out-cubic";
-					duration-ms = 100;
+					duration-ms = 120;
 				};
 
 				window-movement =
 				{
 					curve = "ease-out-expo";
-					duration-ms = 100;
+					duration-ms = 150;
 				};
 			};
 

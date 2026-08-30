@@ -26,6 +26,7 @@
 
       set -g default-terminal "tmux-256color"
       set -as terminal-features ",xterm-256color:RGB"
+			set -as terminal-features "*,xterm*:RGB"
       set -g mouse on
       set -sg escape-time 0
     '';
