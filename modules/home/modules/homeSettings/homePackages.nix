@@ -4,8 +4,8 @@ let
 	  #! /bin/sh
 		chosen_action=$(printf  "system Configuration\nsystem Control\nlauncher" | rofi -dmenu -p "Great Garden Of White Lotus")
 		case "$chosen_action" in
-		  "system Configuration") /home/kumoren/projects/nix/hakurenNixosConfig/resources/scripts/configEditing.sh ;;
-			"system Control") /home/kumoren/projects/nix/hakurenNixosConfig/resources/scripts/systemOptions.sh ;;
+		  "system Configuration") /home/hakuTsuki/hakurenNixosConfig/resources/scripts/configEditing.sh ;;
+			"system Control") /home/hakuTsuki/hakurenNixosConfig/resources/scripts/systemOptions.sh ;;
 			"launcher") rofi -show drun ;;
 		esac
 	'';
@@ -32,12 +32,12 @@ let
 	# 	#! /bin/sh
 	# 	if zenity --question --title="System Configuration Access" --text="Awaiting the order to open..."
 	# 	then
-	# 		alacritty --working-directory=/home/kumoren/projects/nix/hakurenNixosConfig/ --command tmux
+	# 		alacritty --working-directory=/home/hakuTsuki/projects/nix/hakurenNixosConfig/ --command tmux
 	# 	fi
 	# '';
 	#
 	# hakuWallpaperChange = pkgs.writeShellScriptBin "haku Wallpaper Switcher" ''
-	# 	picture=$(find /home/kumoren/images -name '*.*' | rofi -dmenu)
+	# 	picture=$(find /home/hakuTsuki/images -name '*.*' | rofi -dmenu)
 	# 	awww img --transition-type wipe --transition-angle 150 --transition-pos 0.2,0.8 --transition-step 255 --transition-fps 60 $picture
 	# 	'';
 	in

@@ -25,7 +25,7 @@
 			}
 		];
 
-	  initContent = "source /home/kumoren/projects/nix/hakurenNixosConfig/modules/home/modules/zsh/.p10k.zsh";
+	  initContent = "source /home/hakuTsuki/hakurenNixosConfig/modules/home/modules/zsh/.p10k.zsh";
 
 		shellAliases =
 		{
@@ -35,5 +35,5 @@
 		};
 
   };
-	home.file.".p10k.zsh".source = /home/kumoren/projects/nix/hakurenNixosConfig/modules/home/modules/zsh/.p10k.zsh;
+	home.file.".p10k.zsh".source = /home/hakuTsuki/hakurenNixosConfig/modules/home/modules/zsh/.p10k.zsh;
 }

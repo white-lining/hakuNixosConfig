@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       user = {
-        name = "hakuren";
+        name = "hakuTsuki";
         email = "mnievas640@gmail.com";
       };
     };

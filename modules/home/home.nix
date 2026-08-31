@@ -1,8 +1,8 @@
 { pkgs, pkgs-stable, config, ... }:
 {
   home = {
-    username = "kumoren";
-    homeDirectory = "/home/kumoren";
+    username = "hakuTsuki";
+    homeDirectory = "/home/hakuTsuki";
     stateVersion = "25.11";
     pointerCursor = {
       enable = true;

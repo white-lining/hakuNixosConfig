@@ -40,7 +40,7 @@
 
   users = {
     defaultUserShell = pkgs.zsh;
-    users.kumoren = {
+    users.hakuTsuki = {
       isNormalUser = true;
       extraGroups = [ "wheel" "input" "power" "audio" "video" "networkmanager" ];
     };

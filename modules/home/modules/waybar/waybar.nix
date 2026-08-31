@@ -136,11 +136,11 @@
         "custom/wallchange" = {
           format = "<span size='x-large'></span>";
           exec = "echo ; echo 󰆊 switch wallpaper";
-          on-click = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/blueAppreciation.jpg";
-          on-click-middle = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/siren.png";
-          on-click-right = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/blueDragons.jpg";
-          on-scroll-up = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/Glint.jpg";
-          on-scroll-down = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/kumoren/images/CyndiWave.png";
+          on-click = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuTsuki/images/blueAppreciation.jpg";
+          on-click-middle = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuTsuki/images/siren.png";
+          on-click-right = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuTsuki/images/blueDragons.jpg";
+          on-scroll-up = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuTsuki/images/Glint.jpg";
+          on-scroll-down = "awww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/hakuTsuki/images/CyndiWave.png";
         };
 
         "clock" = {

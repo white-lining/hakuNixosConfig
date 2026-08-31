@@ -51,7 +51,7 @@
     in
     {
       # When rebuilding, nixos will look for the configuration in nixosConfigurations.HOSTNAME, which we'll define here as a part of the flake, nixosSystem is the function that creates the system
-      nixosConfigurations.nixlotus = nixpkgs.lib.nixosSystem #TODO: Change the directories apropiate for the new system
+      nixosConfigurations.nixLotus = nixpkgs.lib.nixosSystem 
       {
         # specialArgs allows to pass extra arguments to all modules, an obvious use case it to pass inputs
         specialArgs = { inherit inputs; };
@@ -68,7 +68,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit inputs pkgs-stable; };
-              users.kumoren = {
+              users.hakuTsuki = {
                 imports = [
                   ./modules/home/home.nix
                   nixvim.homeModules.nixvim

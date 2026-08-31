@@ -7,7 +7,7 @@
 
       background = [
         {
-          path = "/home/kumoren/images/siren.png";
+          path = "/home/hakuTsuki/hakurenNixosConfig/resources/wallpapers/siren.png";
           blur_passes = 2;
           blur_size = 1;
         }
@@ -19,7 +19,7 @@
       };
 
       image = {
-        path = "/home/kumoren/images/Mountain.jpg";
+        path = "/home/hakuTsuki/hakurenNixosConfig/resources/wallpapers/Mountain.jpg";
         border_size = 3;
         border_color = "rgba(238, 198, 245, 1)";
         size = 160;
