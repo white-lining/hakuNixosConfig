@@ -6,7 +6,7 @@
   stylix.base16Scheme = {
 
 		author = "HakuTsuki";
-		scheme = "Cold World";
+		scheme = "Cold Sky";
 
     base00 = "2e3440"; 
     base01 = "3b4252"; 
@@ -15,15 +15,15 @@
     base04 = "e3f4ff"; 
     base05 = "ddf1ff"; 
     base06 = "d4edfd"; 
-    base07 = "3887ee";
-    base08 = "5799f0"; 
-    base09 = "eec6f5";
-    base0A = "7ea5d9"; 
-    base0B = "a7f0f1";
-    base0C = "b1dbf9"; 
-    base0D = "cee4fd";
-    base0E = "b6e2f2";
-    base0F = "84bcfd";
+    base07 = "34506f";
+    base08 = "97d1fd"; 
+    base09 = "b2ebf3";
+    base0A = "6e9dd0"; 
+    base0B = "cee4fd";
+    base0C = "b2dbfa"; 
+    base0D = "d8fdfa";
+    base0E = "82a7cf";
+    base0F = "91bada";
   };
 
   stylix.fonts = {

@@ -9,37 +9,37 @@ let
 			"launcher") rofi -show drun ;;
 		esac
 	'';
-	volumeControlZen = pkgs.writeShellScriptBin "volume Control Zen" ''
-		#! /bin/sh
-		user_volume=$(zenity --scale --value=50 --text="Set volume now..." --title="Default Sink Volume Control  by Hakuren")
-
-		if [ $user_volume -ge 0 ]
-		then
-			volume_converted=$(awk "BEGIN {print $user_volume / 100}")
-			wpctl set-volume @DEFAULT_SINK@ $volume_converted
-		else
-			zenity --info --text="No Decision Processed"
-		fi
-	'';
-
-	hakuSystemTrack = pkgs.writeShellScriptBin "haku System Tracking" ''
-		#! /bin/sh
-		system_info=$(top -b -n 1 | head --lines=5)
-		zenity --info --title="Welcome To The System Watcher, Hakuren" --text=$system_info --ok-label="Dismiss..." --width=680
-  '';
-
-	hakuQuickConfig = pkgs.writeShellScriptBin "haku Configuration Management" ''
-		#! /bin/sh
-		if zenity --question --title="System Configuration Access" --text="Awaiting the order to open..."
-		then
-			alacritty --working-directory=/home/kumoren/projects/nix/hakurenNixosConfig/ --command tmux
-		fi
-	'';
-
-	hakuWallpaperChange = pkgs.writeShellScriptBin "haku Wallpaper Switcher" ''
-		picture=$(find /home/kumoren/images -name '*.*' | rofi -dmenu)
-		awww img --transition-type wipe --transition-angle 150 --transition-pos 0.2,0.8 --transition-step 255 --transition-fps 60 $picture
-		'';
+	# volumeControlZen = pkgs.writeShellScriptBin "volume Control Zen" ''
+	# 	#! /bin/sh
+	# 	user_volume=$(zenity --scale --value=50 --text="Set volume now..." --title="Default Sink Volume Control  by Hakuren")
+	#
+	# 	if [ $user_volume -ge 0 ]
+	# 	then
+	# 		volume_converted=$(awk "BEGIN {print $user_volume / 100}")
+	# 		wpctl set-volume @DEFAULT_SINK@ $volume_converted
+	# 	else
+	# 		zenity --info --text="No Decision Processed"
+	# 	fi
+	# '';
+	#
+	# hakuSystemTrack = pkgs.writeShellScriptBin "haku System Tracking" ''
+	# 	#! /bin/sh
+	# 	system_info=$(top -b -n 1 | head --lines=5)
+	# 	zenity --info --title="Welcome To The System Watcher, Hakuren" --text=$system_info --ok-label="Dismiss..." --width=680
+	#  '';
+	#
+	# hakuQuickConfig = pkgs.writeShellScriptBin "haku Configuration Management" ''
+	# 	#! /bin/sh
+	# 	if zenity --question --title="System Configuration Access" --text="Awaiting the order to open..."
+	# 	then
+	# 		alacritty --working-directory=/home/kumoren/projects/nix/hakurenNixosConfig/ --command tmux
+	# 	fi
+	# '';
+	#
+	# hakuWallpaperChange = pkgs.writeShellScriptBin "haku Wallpaper Switcher" ''
+	# 	picture=$(find /home/kumoren/images -name '*.*' | rofi -dmenu)
+	# 	awww img --transition-type wipe --transition-angle 150 --transition-pos 0.2,0.8 --transition-step 255 --transition-fps 60 $picture
+	# 	'';
 	in
 {
   home.packages =
@@ -47,7 +47,7 @@ let
     # Utility
     pkgs.bat
     pkgs.tmux
-    # pkgs.onlyoffice-desktopeditors
+    pkgs-stable.onlyoffice-desktopeditors
     pkgs.zed-editor
     pkgs.cliphist
     pkgs.grim
@@ -94,10 +94,10 @@ let
     pkgs.curl
 
 		# Custom scripts
-		volumeControlZen
-		hakuSystemTrack
-		hakuQuickConfig
-		hakuWallpaperChange
+		# volumeControlZen
+		# hakuSystemTrack
+		# hakuQuickConfig
+		# hakuWallpaperChange
 		centralControlHaku
   ];
 }
